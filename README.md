@@ -1,4 +1,4 @@
-# Car Voting System - Angular Routing Workshop
+# Car Details - Angular Routing Workshop
 
 ## Learning Objectives
 
