@@ -379,8 +379,6 @@ export class AddComponent {
   carService = inject(CarService)
   router = inject(Router)
 
-  myCar: Car = {id: 0, make: '', model: '', description: ''}
-
   constructor() {
     this.carForm = this.formBuilder.group({
       make: ['', Validators.required],
@@ -389,12 +387,8 @@ export class AddComponent {
     });
   }
 
-  addCar() {
-    this.myCar.make = this.carForm.value.make,
-    this.myCar.model = this.carForm.value.model,
-    this.myCar.description = this.carForm.value.description
-    
-    this.carService.addCar(this.myCar)
+  addCar() {  
+    this.carService.addCar(this.carForm.value)
     this.router.navigate(['cars'])
   }
 }
